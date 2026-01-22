@@ -9,6 +9,7 @@ import {
   Linkedin,
   Send,
   MessageCircle,
+  Globe,
 } from "lucide-react";
 
 const Contact = () => {
@@ -60,16 +61,23 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Localisation",
-      value: "Rabat, Maroc",
+      value: "Rabat",
       href: "#",
       color: "text-red-600",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "Ismail Alla",
+      value: "www.linkedin.com/in/ismail-alla/",
       href: "https://www.linkedin.com/in/ismail-alla/",
       color: "text-blue-700",
+    },
+    {
+      icon: Globe,
+      label: "Portfolio",
+      value: "https://ismailalla2.github.io/portfolio/",
+      href: "https://ismailalla2.github.io/portfolio/",
+      color: "text-purple-600",
     },
   ];
 

@@ -1,65 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Award, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 const Education = () => {
   const education = [
     {
-      degree: "Master en Systèmes Intelligents",
-      institution: "Université Mohammed V",
-      location: "Rabat, Maroc",
-      period: "Octobre 2023 - Présent",
-      status: "En cours",
+      degree: "Master - Systèmes de traitement intelligents",
+      institution: "Université Mohammed V (Faculté des Sciences)",
+      location: "Rabat",
+      period: "octobre 2023 – novembre 2025",
+      status: "Diplômé",
       description:
-        "Formation avancée en intelligence artificielle, machine learning et systèmes intelligents.",
+        "Formation avancée en systèmes de traitement intelligents et intelligence artificielle.",
       type: "master",
     },
     {
-      degree: "Licence en Génie Logiciel",
-      institution: "Université Cadi Ayyad",
-      location: "Essaouira, Maroc",
-      period: "Septembre 2022 - Juillet 2023",
+      degree: "Licence - Ingénierie des Systèmes Informatiques et Logiciels",
+      institution: "Université Cadi Ayyad (École Supérieure de Technologie)",
+      location: "Essaouira",
+      period: "septembre 2022 – juillet 2023",
       status: "Diplômé",
       description:
-        "Formation spécialisée en développement logiciel, architectures système et gestion de projets.",
+        "Formation spécialisée en ingénierie des systèmes informatiques et développement logiciel.",
       type: "licence",
     },
     {
-      degree: "BTS Développement de Systèmes d'Information",
-      institution: "École Technique",
-      location: "Oujda, Maroc",
-      period: "Septembre 2020 - Juillet 2022",
+      degree: "BTS - Développement des systèmes d'information",
+      institution: "BTS (Brevet de Technicien Supérieur)",
+      location: "Oujda",
+      period: "septembre 2020 – juillet 2022",
       status: "Diplômé",
       description:
-        "Formation technique en développement d'applications et gestion de bases de données.",
+        "Formation technique en développement des systèmes d'information (Bac +2).",
       type: "bts",
     },
   ];
 
-  const courses = [
-    {
-      title: "Building Scalable Java Microservices",
-      provider: "Google Cloud",
-      date: "Mars 2024",
-      certificate: true,
-      skills: ["Java", "Microservices", "Google Cloud", "Spring Boot"],
-    },
-    {
-      title: "Machine Learning with Python",
-      provider: "IBM",
-      date: "Avril 2024",
-      certificate: true,
-      skills: ["Python", "Machine Learning", "Data Science", "TensorFlow"],
-    },
-    {
-      title: "Big Data 101",
-      provider: "IBM",
-      date: "Novembre 2024",
-      certificate: true,
-      skills: ["Big Data", "Analytics", "Data Processing", "Hadoop"],
-    },
-  ];
+  const courses = [];
 
   const getEducationIcon = (type: string) => {
     switch (type) {
@@ -165,66 +143,6 @@ const Education = () => {
           </div>
         </motion.div>
 
-        {/* Professional Courses */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex items-center mb-8">
-            <Award className="h-8 w-8 text-green-600 dark:text-green-400 mr-3" />
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-              Certifications Professionnelles
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.map((course, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-2xl">🏆</div>
-                  {course.certificate && (
-                    <span className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 px-2 py-1 rounded-full text-xs font-medium">
-                      Certifié
-                    </span>
-                  )}
-                </div>
-
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                  {course.title}
-                </h4>
-
-                <div className="text-blue-600 dark:text-blue-400 font-medium mb-2">
-                  {course.provider}
-                </div>
-
-                <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  {course.date}
-                </div>
-
-                <div className="flex flex-wrap gap-1">
-                  {course.skills.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Education Summary */}
         <motion.div
@@ -234,7 +152,7 @@ const Education = () => {
           viewport={{ once: true }}
           className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 3
@@ -244,16 +162,8 @@ const Education = () => {
               </div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                3
-              </div>
-              <div className="text-gray-600 dark:text-gray-400 text-sm">
-                Certifications
-              </div>
-            </div>
-            <div>
               <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                4+
+                5+
               </div>
               <div className="text-gray-600 dark:text-gray-400 text-sm">
                 Années d'études
@@ -261,10 +171,10 @@ const Education = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
-                En cours
+                Master
               </div>
               <div className="text-gray-600 dark:text-gray-400 text-sm">
-                Formation Master
+                Diplôme obtenu
               </div>
             </div>
           </div>

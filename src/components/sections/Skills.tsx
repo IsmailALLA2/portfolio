@@ -13,14 +13,14 @@ import {
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "Flutter", icon: "📱", category: "mobile" },
+    { name: "Java", icon: "☕", category: "backend" },
     { name: "Spring Boot", icon: "🌱", category: "backend" },
     { name: "Angular", icon: "🅰️", category: "frontend" },
-    { name: "Java", icon: "☕", category: "backend" },
-    { name: "SQL", icon: "🗄️", category: "database" },
-    { name: "Python", icon: "🐍", category: "backend" },
-    { name: "Machine Learning", icon: "🤖", category: "ai" },
-    { name: "OpenStack", icon: "☁️", category: "cloud" },
+    { name: "Gestion de projet", icon: "📊", category: "management" },
+    { name: "Flutter", icon: "📱", category: "mobile" },
+    { name: "Architecture logicielle", icon: "🏗️", category: "architecture" },
+    { name: "SQL && NO SQL", icon: "🗄️", category: "database" },
+    { name: "UML", icon: "📐", category: "design" },
   ];
 
   const languages = [

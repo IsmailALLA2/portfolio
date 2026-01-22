@@ -4,10 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/portfolio", // Replace with your repository name
-  experimental: {
-    appDir: true,
-  },
+  // basePath: "/portfolio", // Uncomment if deploying to GitHub Pages with subdirectory
 };
 
 module.exports = nextConfig;

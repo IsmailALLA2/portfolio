@@ -1,16 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Ismail Alla - Développeur Mobile",
+  title: "Ismail Alla - Ingénieur Full-Stack",
   description:
-    "Portfolio de Ismail Alla, développeur mobile expérimenté spécialisé en Flutter, Spring Boot, et développement d'applications performantes.",
+    "Portfolio de Ismail Alla, ingénieur logiciel full-stack. Je conçois, développe et mets en production des solutions web et mobiles robustes, avec un fort accent sur l'architecture, la qualité du code et la scalabilité.",
   keywords:
-    "développeur mobile, Flutter, Spring Boot, Android, portfolio, Ismail Alla",
+    "ingénieur full-stack, Java, Spring Boot, Angular, Flutter, architecture logicielle, portfolio, Ismail Alla",
   authors: [{ name: "Ismail Alla" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

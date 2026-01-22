@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Mail, Linkedin } from "lucide-react";
+import { Download, Mail, Linkedin, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -24,12 +24,12 @@ const Hero = () => {
             </h1>
 
             <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-              Développeur Mobile Expérimenté
+              Ingénieur Full-Stack
             </h2>
 
             <div className="flex items-center justify-center text-gray-500 dark:text-gray-400 mb-8 space-x-6">
-              <span className="flex items-center">📍 Rabat, Maroc</span>
-              <span className="flex items-center">📱 +212 651 462 399</span>
+              <span className="flex items-center">📍 Rabat</span>
+              <span className="flex items-center">📱 +212651462399</span>
             </div>
           </motion.div>
 
@@ -40,11 +40,7 @@ const Hero = () => {
             className="max-w-3xl mx-auto mb-12"
           >
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              Développeur mobile expérimenté avec une expertise dans la création
-              d'applications Android performantes. Maîtrise de Flutter et du SDK
-              Android, développement backend (Java, Spring Boot, API RESTful),
-              bonne connaissance de SQL, Python, Big Data et passion pour
-              l'amélioration de l'expérience utilisateur.
+              Ingénieur logiciel full-stack, je conçois, développe et mets en production des solutions web et mobiles robustes, avec un fort accent sur l'architecture, la qualité du code et la scalabilité.
             </p>
           </motion.div>
 
@@ -72,10 +68,24 @@ const Hero = () => {
               LinkedIn
             </a>
 
-            <button className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors">
+            <a
+              href="https://ismailalla2.github.io/portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors"
+            >
+              <Globe className="w-5 h-5 mr-2" />
+              Portfolio
+            </a>
+
+            <a
+              href="/CV_Ismail_Alla.pdf"
+              download="CV_Ismail_Alla.pdf"
+              className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors"
+            >
               <Download className="w-5 h-5 mr-2" />
               Télécharger CV
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -86,7 +96,7 @@ const Hero = () => {
           >
             <div>
               <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                3+
+                4+
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 Années d'expérience
@@ -94,15 +104,15 @@ const Hero = () => {
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                5+
+                6
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
-                Projets réalisés
+                Expériences professionnelles
               </div>
             </div>
             <div>
               <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                8+
+                8
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 Technologies maîtrisées

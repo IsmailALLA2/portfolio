@@ -6,52 +6,63 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Full Stack Developer",
-      company: "Asas",
-      location: "Remote",
-      period: "Juin 2024 - Juillet 2024",
+      title: "Développeur Full Stack & Cloud",
+      company: "AJIAPP",
+      location: "Rabat",
+      period: "mai 2025 – Présent",
       description:
-        "Développement d'un système connectant les étudiants aux universités turques et aux agences.",
-      technologies: ["Java", "Spring Boot", "Angular", "SQL"],
+        "Backend Spring Boot (Hexagonal Architecture), API REST, DDD, Clean Architecture. Mobile Flutter, Riverpod, State Management. GCP deployment (CI/CD). Publication Google Play / App Store.",
+      technologies: ["Spring Boot", "Flutter", "Riverpod", "Clean Architecture", "DDD", "Google Cloud Platform", "CI/CD"],
+      type: "contract",
+    },
+    {
+      title: "Stagiaire PFE (AI & Mobile)",
+      company: "IndataCore",
+      location: "Casablanca",
+      period: "février 2025 – août 2025",
+      description:
+        "Intégration SDK IA pour identification d'ID. Backend Spring Boot (RESTful APIs). Flutter (Riverpod, Clean Architecture, DDD). Kotlin + Jetpack Compose (Super App prototype). Tests & validation, performance, UX.",
+      technologies: ["Spring Boot", "Flutter", "Riverpod", "Clean Architecture", "DDD", "Kotlin", "Jetpack Compose", "AI SDK"],
+      type: "internship",
+    },
+    {
+      title: "Développeur Full Stack",
+      company: "Asas",
+      location: "Rabat",
+      period: "juin 2024",
+      description:
+        "Angular frontend. Spring Boot backend. Plateforme de mise en relation étudiants/agences/universités. API REST, CRUD, authentification.",
+      technologies: ["Angular", "Spring Boot", "Java", "SQL", "REST API"],
       type: "freelance",
     },
     {
-      title: "Mobile Developer",
-      company: "ZairTech",
-      location: "Rabat, Maroc",
-      period: "Janvier 2024 - Avril 2024",
+      title: "Développeur Mobile",
+      company: "Medzair France",
+      location: "Rabat",
+      period: "janvier 2024 – avril 2024",
       description:
-        "Intégration d'APIs REST, utilisation de GetX pour la gestion d'état, notifications push et mises à jour en temps réel.",
+        "Flutter mobile app. GetX state management. REST APIs integration. Push Notifications. Dynamic refresh, performance optimization.",
       technologies: ["Flutter", "GetX", "REST API", "Push Notifications"],
       type: "contract",
     },
     {
-      title: "Backend Intern",
+      title: "Stage Développeur Backend",
       company: "SogeSoft",
-      location: "Rabat, Maroc",
-      period: "Avril 2023 - Juillet 2023",
+      location: "Oujda",
+      period: "avril 2023 – juillet 2023",
       description:
-        "Développement d'APIs RESTful en utilisant Spring Boot et Hibernate pour la gestion des données.",
-      technologies: ["Spring Boot", "Hibernate", "Java", "RESTful APIs"],
+        "Spring Boot API REST. Architecture scalable. Sécurité, performance, maintenabilité. Base de données SQL. Tests unitaires.",
+      technologies: ["Spring Boot", "Java", "RESTful APIs", "SQL"],
       type: "internship",
     },
     {
-      title: "Android Intern",
+      title: "Stage Développeur Android",
       company: "SogeSoft",
-      location: "Rabat, Maroc",
-      period: "Avril 2022 - Septembre 2022",
+      location: "Oujda",
+      period: "avril 2022",
       description:
-        "Construction d'une application Android moderne en utilisant le SDK Flutter.",
-      technologies: ["Flutter", "Android SDK", "Dart"],
-      type: "internship",
-    },
-    {
-      title: "Desktop App Intern",
-      company: "Colaimo",
-      location: "Maroc",
-      period: "Juin 2021 - Juillet 2021",
-      description: "Développement d'applications de bureau en Java.",
-      technologies: ["Java", "Swing", "Desktop Applications"],
+        "Flutter delivery app. GetX (reactive architecture, state management). Navigation, UI/UX. API integration. Optimisation performance.",
+      technologies: ["Flutter", "GetX", "Java", "Android"],
       type: "internship",
     },
   ];
@@ -193,7 +204,7 @@ const Experience = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                3+
+                4+
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Années d'expérience
@@ -201,7 +212,7 @@ const Experience = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                5
+                6
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Postes occupés
@@ -209,7 +220,7 @@ const Experience = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                4
+                5
               </div>
               <div className="text-gray-600 dark:text-gray-400">
                 Entreprises
