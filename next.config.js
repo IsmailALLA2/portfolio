@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // basePath: "/portfolio", // Uncomment if deploying to GitHub Pages with subdirectory
+  basePath: "/portfolio", // Required for GitHub Pages deployment with subdirectory
+  assetPrefix: "/portfolio", // Required for GitHub Pages to load assets correctly
 };
 
 module.exports = nextConfig;
