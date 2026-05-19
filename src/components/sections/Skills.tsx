@@ -1,195 +1,149 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Code,
-  Database,
-  Smartphone,
-  Server,
-  Brain,
-  Globe,
-  Heart,
-} from "lucide-react";
+
+const skillGroups = [
+  {
+    domain: "Mobile",
+    color: "#00D9FF",
+    icon: "📱",
+    skills: ["Flutter", "Dart", "Kotlin", "Jetpack Compose", "Riverpod", "GetX"],
+  },
+  {
+    domain: "Backend",
+    color: "#7C3AED",
+    icon: "⚙️",
+    skills: ["Java", "Spring Boot", "Spring Security", "REST API", "GraphQL", "Kafka", "Hibernate"],
+  },
+  {
+    domain: "Frontend",
+    color: "#F59E0B",
+    icon: "🌐",
+    skills: ["Angular", "React", "TypeScript", "JavaScript", "HTML5", "SCSS"],
+  },
+  {
+    domain: "Cloud & DevOps",
+    color: "#10B981",
+    icon: "☁️",
+    skills: ["Google Cloud", "Docker", "GitHub Actions", "CI/CD", "Codemagic", "App Store Connect", "Google Play Console"],
+  },
+  {
+    domain: "Database",
+    color: "#EF4444",
+    icon: "🗄️",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Firebase Firestore", "Redis", "SQL Server"],
+  },
+  {
+    domain: "Tools & Testing",
+    color: "#8892A4",
+    icon: "🔧",
+    skills: ["Git", "Postman", "Swagger", "JUnit", "Mockito"],
+  },
+];
+
+const languages = [
+  { name: "Arabic", level: "Native" },
+  { name: "English", level: "Professional" },
+  { name: "French", level: "Intermediate" },
+];
 
 const Skills = () => {
-  const technicalSkills = [
-    { name: "Java", icon: "☕", category: "backend" },
-    { name: "Spring Boot", icon: "🌱", category: "backend" },
-    { name: "Angular", icon: "🅰️", category: "frontend" },
-    { name: "Gestion de projet", icon: "📊", category: "management" },
-    { name: "Flutter", icon: "📱", category: "mobile" },
-    { name: "Architecture logicielle", icon: "🏗️", category: "architecture" },
-    { name: "SQL && NO SQL", icon: "🗄️", category: "database" },
-    { name: "UML", icon: "📐", category: "design" },
-  ];
-
-  const languages = [
-    { name: "Arabe", level: "Native", percentage: 100 },
-    { name: "Français", level: "Fluent", percentage: 90 },
-    { name: "Anglais", level: "Intermediate", percentage: 70 },
-  ];
-
-  const interests = [
-    { name: "Volleyball", icon: "🏐" },
-    { name: "Running", icon: "🏃‍♂️" },
-  ];
-
-  const skillCategories = [
-    { name: "Mobile Development", icon: Smartphone, color: "text-blue-600" },
-    { name: "Backend Development", icon: Server, color: "text-green-600" },
-    { name: "Database Management", icon: Database, color: "text-purple-600" },
-    { name: "Machine Learning", icon: Brain, color: "text-red-600" },
-  ];
-
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="relative py-28 bg-[#0D1117]">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1E2A38] to-transparent" />
+
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Compétences & Expertise
+          <p className="section-label mb-4">Tech Stack</p>
+          <h2
+            className="font-syne text-4xl md:text-5xl font-bold text-[#F0EDE8] leading-tight"
+            style={{ fontWeight: 800 }}
+          >
+            What I work with
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Technologies et outils que je maîtrise pour créer des solutions
-            innovantes
-          </p>
         </motion.div>
 
-        {/* Technical Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
-            Technologies
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {technicalSkills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="text-3xl mb-3">{skill.icon}</div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">
-                  {skill.name}
-                </h4>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Skill Categories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center">
-            Domaines d'expertise
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skillCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
-              >
-                <category.icon className={`h-8 w-8 ${category.color} mb-4`} />
-                <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
-                  {category.name}
-                </h4>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Languages */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <Globe className="h-6 w-6 mr-3 text-blue-600" />
-              Langues
-            </h3>
-            <div className="space-y-4">
-              {languages.map((language, index) => (
-                <div
-                  key={language.name}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4"
+        {/* Skill groups grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-16">
+          {skillGroups.map((group, groupIndex) => (
+            <motion.div
+              key={group.domain}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: groupIndex * 0.08 }}
+              className="card p-6"
+            >
+              {/* Group header */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-lg">{group.icon}</span>
+                <span
+                  className="font-syne font-semibold text-sm uppercase tracking-wider"
+                  style={{ color: group.color, fontWeight: 700 }}
                 >
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-medium text-gray-900 dark:text-white">
-                      {language.name}
-                    </span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                      {language.level}
-                    </span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${language.percentage}%` }}
-                      transition={{ duration: 1, delay: 0.8 + index * 0.2 }}
-                      viewport={{ once: true }}
-                      className="bg-blue-600 h-2 rounded-full"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+                  {group.domain}
+                </span>
+              </div>
 
-          {/* Interests */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <Heart className="h-6 w-6 mr-3 text-red-600" />
-              Centres d'intérêt
-            </h3>
-            <div className="space-y-4">
-              {interests.map((interest, index) => (
-                <motion.div
-                  key={interest.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center hover:shadow-md transition-shadow"
-                >
-                  <div className="text-4xl mb-3">{interest.icon}</div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">
-                    {interest.name}
-                  </h4>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="skill-tag"
+                    style={{
+                      borderColor: `${group.color}25`,
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.target as HTMLElement).style.color = group.color;
+                      (e.target as HTMLElement).style.borderColor = `${group.color}50`;
+                      (e.target as HTMLElement).style.background = `${group.color}08`;
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.target as HTMLElement).style.color = "#8892A4";
+                      (e.target as HTMLElement).style.borderColor = `${group.color}25`;
+                      (e.target as HTMLElement).style.background = "#0D1117";
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Languages */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-xs text-[#4A5568] uppercase tracking-wider mb-5 font-semibold">
+            Languages
+          </p>
+          <div className="flex flex-wrap gap-4">
+            {languages.map((lang) => (
+              <div
+                key={lang.name}
+                className="flex items-center gap-3 px-5 py-3 rounded-xl border border-[#1E2A38] bg-[#080B12]"
+              >
+                <div>
+                  <div className="text-sm font-semibold text-[#F0EDE8]">{lang.name}</div>
+                  <div className="text-xs text-[#4A5568]">{lang.level}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
